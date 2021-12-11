@@ -1,7 +1,7 @@
 import telebot
 
 
-bot = telebot.TeleBot('5060294107:AAEmco-9d_24GT_gS9jepQ4VsxBUbKvAX5U', parse_mode='html')
+bot = telebot.TeleBot('', parse_mode='html')
 
 
 """
