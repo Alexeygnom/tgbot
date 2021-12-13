@@ -1,1 +1,2 @@
-pytelegrambotapi = 4.2.1	
+Для работы файла "bot.py" требуется библиотека pytelegrambotapi = 4.2.1
+Для работы файла "bot.test.py"требуется библиотека telethon = 1.24.0
