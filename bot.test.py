@@ -28,7 +28,7 @@ class tgbot_test(unittest.TestCase):
 
     def testB(self):
         try:
-            time.sleep(2)
+            time.sleep(1)
             client.send_message('@Mind_gnom_bot', '/victorina')
             messages = client.get_messages('@Mind_gnom_bot')
             for message in client.get_messages('@Mind_gnom_bot', limit=1):
@@ -41,6 +41,7 @@ class tgbot_test(unittest.TestCase):
 
     def testC(self):
         try:
+            time.sleep(1)
             client.send_message('@Mind_gnom_bot', 'География')
             messages = client.get_messages('@Mind_gnom_bot')
             for message in client.get_messages('@Mind_gnom_bot', limit=1):
@@ -54,7 +55,7 @@ class tgbot_test(unittest.TestCase):
 
     def testD(self):
         try:
-            time.sleep(1)
+            time.sleep(2)
             client.send_message('@Mind_gnom_bot', 'Либревиль')
             time.sleep(1)
             client.send_message('@Mind_gnom_bot', 'Молдова')
@@ -68,14 +69,14 @@ class tgbot_test(unittest.TestCase):
             client.send_message('@Mind_gnom_bot', '/start')
             time.sleep(1)
             client.send_message('@Mind_gnom_bot', '/victorina')
-            time.sleep(1)
+            time.sleep(2)
 
             client.send_message('@Mind_gnom_bot', 'История')
             messages = client.get_messages('@Mind_gnom_bot')
             for message in client.get_messages('@Mind_gnom_bot', limit=1):
                 m = message.message
             self.assertEqual(len(messages), 1)
-            text = f'Вы выбрали историю, и вот ваш первый в'
+            text = f'Вы выбрали историю, и вот ваш первый вопрос:'
             self.assertRegex(m, text)
 
         except:
@@ -83,6 +84,7 @@ class tgbot_test(unittest.TestCase):
 
     def testE(self):
         try:
+            time.sleep(2)
             client.send_message('@Mind_gnom_bot', '988')
             time.sleep(1)
             client.send_message('@Mind_gnom_bot', '1337')
@@ -92,6 +94,7 @@ class tgbot_test(unittest.TestCase):
             client.send_message('@Mind_gnom_bot', '1096')
             time.sleep(1)
             client.send_message('@Mind_gnom_bot', '476')
+            time.sleep(1)
             client.send_message('@Mind_gnom_bot', '/start')
             time.sleep(1)
             client.send_message('@Mind_gnom_bot', '/victorina')
@@ -110,6 +113,7 @@ class tgbot_test(unittest.TestCase):
 
     def testF(self):
         try:
+            time.sleep(2)
             client.send_message('@Mind_gnom_bot', 'Не имеют дифференцированных тканей')
             time.sleep(1)
             client.send_message('@Mind_gnom_bot', 'Более 30см')
@@ -137,6 +141,7 @@ class tgbot_test(unittest.TestCase):
 
     def testG(self):
         try:
+            time.sleep(1)
             client.send_message('@Mind_gnom_bot', 'Гидра')
             time.sleep(1)
             client.send_message('@Mind_gnom_bot', 'Венера')
